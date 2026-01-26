@@ -34,10 +34,13 @@ export default function AuthPage() {
 
         if (data.user) {
           // Create user profile
-          await supabase.from('user_profiles').insert({
-            id: data.user.id,
-            email: data.user.email!,
-            full_name: fullName,
+        await supabase
+  .from('user_profiles')
+  .insert({
+    id: data.user.id,
+    email: data.user.email!,
+    full_name: fullName,
+  } as any)
           })
 
           setMessage('Account created! Please check your email to verify.')
