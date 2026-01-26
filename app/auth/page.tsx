@@ -41,8 +41,7 @@ export default function AuthPage() {
     email: data.user.email!,
     full_name: fullName,
   } as any)
-          })
-
+          
           setMessage('Account created! Please check your email to verify.')
         }
       } else {
